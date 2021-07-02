@@ -1,7 +1,6 @@
 package test;
 
 import static org.junit.Assert.assertTrue;
-import org.junit.Ignore;
 import org.junit.Test;
 import core.BaseTest;
 import page.ContasPage;
@@ -10,18 +9,18 @@ public class CadastroContaTest extends BaseTest{
 
 	ContasPage page = new ContasPage();
 	
-	@Test @Ignore
+	@Test
 	public void inserirConta() {
 		homeApp.clicaNaOpcaoContas();
-		page.setConta("Joao 2");
+		page.setConta("Joao 4");
 		page.salvar();
 		assertTrue(page.contaAdicionadaComSucesso());
 	}
 	
-	@Test @Ignore
+	@Test 
 	public void excluirConta() {
 		homeApp.clicaNaOpcaoContas();
-		page.clicaESeguraEmCimaDoNomeDaConta("Joao 2");
+		page.clicaESeguraEmCimaDoNomeDaConta("Joao 3");
 		page.excluir();
 		assertTrue(page.contaExcluidaComSucesso());
 	}
